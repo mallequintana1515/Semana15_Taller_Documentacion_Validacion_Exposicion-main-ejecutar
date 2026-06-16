@@ -1,0 +1,67 @@
+{
+  "registros": [
+    {
+      "id": 1,
+      "nombre": "Laura Martinez",
+      "correo": "laura@example.com",
+      "telefono": "3001234567",
+      "interes": "Productos agricolas",
+      "comentario": "Deseo conocer los productos disponibles en la feria rural.",
+      "fecha": "2026-06-01T10:15:00.000Z"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos Rios",
+      "correo": "carlos@example.com",
+      "telefono": "3112223344",
+      "interes": "Talleres comunitarios",
+      "comentario": "Me interesa participar en talleres de tecnologia para la comunidad.",
+      "fecha": "2026-06-01T11:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "nombre": "Marta Gomez",
+      "correo": "marta@example.com",
+      "telefono": "3225556677",
+      "interes": "Emprendimientos locales",
+      "comentario": "Quiero ver oportunidades para mostrar productos de mi familia.",
+      "fecha": "2026-06-02T09:05:00.000Z"
+    },
+    {
+      "nombre": "Malle quintana",
+      "correo": "mallequintana1515@gmail.com",
+      "telefono": "3991790189",
+      "interes": "Productos agricolas",
+      "comentario": "hola como estan",
+      "fecha": "2026-06-16T15:50:35.077Z",
+      "id": 4
+    },
+    {
+      "nombre": "Malle quintana",
+      "correo": "mallequintana1515@gmail.com",
+      "telefono": "3991790189",
+      "interes": "Productos agricolas",
+      "comentario": "mejor ori¡oducto mejor calidad",
+      "fecha": "2026-06-16T16:43:08.900Z",
+      "id": 5
+    },
+    {
+      "nombre": "natalia bedoya",
+      "correo": "nata2341@gmail.com",
+      "telefono": "3215432211",
+      "interes": "Talleres comunitarios",
+      "comentario": "necesitamos estar mas unidos",
+      "fecha": "2026-06-16T18:03:14.747Z",
+      "id": 6
+    },
+    {
+      "nombre": "maruja velez",
+      "correo": "maru2323@gmail.com",
+      "telefono": "3215432211",
+      "interes": "Actividades escolares",
+      "comentario": "aprender mas es lo importante",
+      "fecha": "2026-06-16T18:07:14.116Z",
+      "id": 7
+    }
+  ]
+}

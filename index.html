@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto de practica para documentacion, validacion, correccion y exposicion tecnica." />
+    <title>Feria Rural Digital - Semana 15</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <!-- NAVBAR + HERO -->
+    <header class="hero-section text-white">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+            <span class="brand-icon"><i class="bi bi-flower1"></i></span>
+            Feria Rural Digital
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegacion">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto gap-1">
+              <li class="nav-item"><a class="nav-link nav-pill" href="#registro"><i class="bi bi-pencil-square me-1"></i>Registro</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill" href="#registros"><i class="bi bi-table me-1"></i>Registros</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill" href="#dashboard"><i class="bi bi-bar-chart-line me-1"></i>Resumen</a></li>
+              <li class="nav-item"><a class="nav-link nav-pill" href="#documentacion"><i class="bi bi-journal-check me-1"></i>Documentacion</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="container hero-content py-5">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <span class="hero-badge mb-4 d-inline-flex align-items-center gap-2">
+              <i class="bi bi-mortarboard-fill"></i> Semana 15 &mdash; Taller practico
+            </span>
+            <h1 class="display-4 fw-bold hero-title">Documenta, valida, corrige<br class="d-none d-md-block" /> y expone tu proyecto</h1>
+            <p class="lead mt-3 hero-desc">Registra visitantes, prueba validaciones, guarda datos con JSON Server y completa tu documentacion tecnica profesional.</p>
+            <div class="d-flex gap-3 flex-wrap justify-content-center mt-5">
+              <a href="#registro" class="btn btn-hero-primary btn-lg">
+                <i class="bi bi-send me-2"></i>Probar formulario
+              </a>
+              <a href="#documentacion" class="btn btn-hero-outline btn-lg">
+                <i class="bi bi-list-check me-2"></i>Ver tareas
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="hero-stats row g-3 mt-5 justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="hero-stat-card">
+              <i class="bi bi-shield-check"></i>
+              <span>Validaciones</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hero-stat-card">
+              <i class="bi bi-database"></i>
+              <span>JSON Server</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hero-stat-card">
+              <i class="bi bi-journal-text"></i>
+              <span>Bitacora</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hero-stat-card">
+              <i class="bi bi-easel2"></i>
+              <span>Exposicion</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main id="contenido-principal">
+
+      <!-- REGISTRO -->
+      <section class="section-light py-5 py-lg-6" id="registro">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="section-chip"><i class="bi bi-pencil-square me-1"></i>Formulario</span>
+            <h2 class="section-title mt-2">Registro de visitantes</h2>
+            <p class="section-desc">Completa el formulario y verifica que los datos se guarden correctamente en JSON Server.</p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-4">
+              <div class="info-card h-100">
+                <div class="info-card-icon"><i class="bi bi-info-circle-fill"></i></div>
+                <h3 class="h6 fw-bold mt-3 mb-2">Como funciona</h3>
+                <p class="small text-muted mb-3">Completa todos los campos y haz clic en <strong>Guardar registro</strong>. Los datos se envian a JSON Server.</p>
+                <div class="api-badge">
+                  <i class="bi bi-hdd-network me-1"></i>
+                  <code>localhost:3001/registros</code>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <form id="formRegistro" class="form-card-pro" novalidate>
+                <div class="form-card-header">
+                  <i class="bi bi-person-plus-fill me-2"></i>Nuevo visitante
+                </div>
+                <div class="form-card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="nombre" class="form-label-pro">
+                        <i class="bi bi-person me-1"></i>Nombre completo
+                      </label>
+                      <input id="nombre" name="nombre" type="text" class="form-control form-control-pro" placeholder="Ejemplo: Ana Perez" autocomplete="name" />
+                      <div class="invalid-feedback" id="error-nombre"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="correo" class="form-label-pro">
+                        <i class="bi bi-envelope me-1"></i>Correo electronico
+                      </label>
+                      <input id="correo" name="correo" type="email" class="form-control form-control-pro" placeholder="ana@correo.com" autocomplete="email" />
+                      <div class="invalid-feedback" id="error-correo"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="telefono" class="form-label-pro">
+                        <i class="bi bi-telephone me-1"></i>Telefono
+                      </label>
+                      <input id="telefono" name="telefono" type="tel" class="form-control form-control-pro" placeholder="3001234567" autocomplete="tel" />
+                      <div class="form-hint">Exactamente 10 digitos.</div>
+                      <div class="invalid-feedback" id="error-telefono"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="interes" class="form-label-pro">
+                        <i class="bi bi-tag me-1"></i>Interes principal
+                      </label>
+                      <select id="interes" name="interes" class="form-select form-control-pro">
+                        <option value="">Selecciona una opcion</option>
+                        <option value="Productos agricolas">Productos agricolas</option>
+                        <option value="Talleres comunitarios">Talleres comunitarios</option>
+                        <option value="Emprendimientos locales">Emprendimientos locales</option>
+                        <option value="Actividades escolares">Actividades escolares</option>
+                      </select>
+                      <div class="invalid-feedback" id="error-interes"></div>
+                    </div>
+                    <div class="col-12">
+                      <label for="comentario" class="form-label-pro">
+                        <i class="bi bi-chat-left-text me-1"></i>Comentario
+                      </label>
+                      <textarea id="comentario" name="comentario" class="form-control form-control-pro" rows="4" placeholder="Escribe una necesidad, idea o pregunta"></textarea>
+                      <div class="form-hint">Minimo 15 caracteres.</div>
+                      <div class="invalid-feedback" id="error-comentario"></div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 mt-4 flex-wrap">
+                    <button type="submit" class="btn btn-pro-primary">
+                      <i class="bi bi-send me-2" aria-hidden="true"></i>Guardar registro
+                    </button>
+                    <button type="reset" class="btn btn-pro-outline" id="btnLimpiar">
+                      <i class="bi bi-eraser me-2" aria-hidden="true"></i>Limpiar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REGISTROS -->
+      <section class="section-alt py-5 py-lg-6" id="registros">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="section-chip"><i class="bi bi-database me-1"></i>Base de datos</span>
+            <h2 class="section-title mt-2">Registros guardados</h2>
+            <p class="section-desc">Datos consultados en tiempo real desde JSON Server.</p>
+          </div>
+          <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-pro-primary" id="btnRecargar">
+              <i class="bi bi-arrow-clockwise me-1" aria-hidden="true"></i>Recargar datos
+            </button>
+          </div>
+          <div class="table-pro-wrapper">
+            <table class="table table-hover align-middle mb-0">
+              <caption class="visually-hidden">Tabla de registros de visitantes</caption>
+              <thead class="table-pro-head">
+                <tr>
+                  <th scope="col"><i class="bi bi-person me-1"></i>Nombre</th>
+                  <th scope="col"><i class="bi bi-envelope me-1"></i>Correo</th>
+                  <th scope="col"><i class="bi bi-telephone me-1"></i>Telefono</th>
+                  <th scope="col"><i class="bi bi-tag me-1"></i>Interes</th>
+                  <th scope="col"><i class="bi bi-calendar3 me-1"></i>Fecha</th>
+                </tr>
+              </thead>
+              <tbody id="tablaRegistros">
+                <tr><td colspan="5" class="text-center p-4 text-muted"><i class="bi bi-hourglass-split me-2"></i>Cargando registros...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- DASHBOARD -->
+      <section class="section-light py-5 py-lg-6" id="dashboard">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="section-chip"><i class="bi bi-bar-chart-line me-1"></i>Estadisticas</span>
+            <h2 class="section-title mt-2">Resumen del proyecto</h2>
+            <p class="section-desc">Datos calculados automaticamente desde la base local.</p>
+          </div>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-4">
+              <div class="stat-card-pro h-100">
+                <div class="stat-icon-wrap"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
+                <p class="stat-label">Total de visitantes registrados</p>
+                <p class="stat-number" id="totalRegistros">0</p>
+                <p class="stat-hint">Dato calculado desde la base local</p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="chart-card-pro h-100">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <span class="stat-icon-wrap small-icon"><i class="bi bi-pie-chart-fill"></i></span>
+                  <h2 class="h5 mb-0 fw-bold">Intereses registrados</h2>
+                </div>
+                <p class="text-muted small mb-3">Grafico generado con Chart.js</p>
+                <canvas id="graficoIntereses" height="120" aria-label="Grafico de intereses de visitantes" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCUMENTACION -->
+      <section class="section-alt py-5 py-lg-6" id="documentacion">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="section-chip"><i class="bi bi-journal-check me-1"></i>Tareas</span>
+            <h2 class="section-title mt-2">Tareas del taller</h2>
+            <p class="section-desc">Guia rapida de lo que debes completar. La explicacion completa esta en el README y en la carpeta docs.</p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-8">
+              <div class="accordion accordion-pro" id="accordionTareas">
+                <div class="accordion-item accordion-item-pro">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button accordion-btn-pro" type="button" data-bs-toggle="collapse" data-bs-target="#tarea1">
+                      <span class="task-num">1</span>Completa la documentacion tecnica
+                    </button>
+                  </h3>
+                  <div id="tarea1" class="accordion-collapse collapse show" data-bs-parent="#accordionTareas">
+                    <div class="accordion-body accordion-body-pro">
+                      Trabaja en <code>README_ENTREGA.md</code>. Explica tecnologias, instalacion, ejecucion, estructura, funcionalidades, pruebas y evidencias.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item accordion-item-pro">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button accordion-btn-pro collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tarea2">
+                      <span class="task-num">2</span>Registra pruebas y correcciones
+                    </button>
+                  </h3>
+                  <div id="tarea2" class="accordion-collapse collapse" data-bs-parent="#accordionTareas">
+                    <div class="accordion-body accordion-body-pro">
+                      Completa <code>docs/bitacora-validacion.md</code> con minimo 5 pruebas reales.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item accordion-item-pro">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button accordion-btn-pro collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tarea3">
+                      <span class="task-num">3</span>Prepara la exposicion
+                    </button>
+                  </h3>
+                  <div id="tarea3" class="accordion-collapse collapse" data-bs-parent="#accordionTareas">
+                    <div class="accordion-body accordion-body-pro">
+                      Completa <code>docs/guion-exposicion.md</code>. Debes explicar objetivo, tecnologias, funcionamiento, pruebas, correcciones y aprendizajes.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item accordion-item-pro">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button accordion-btn-pro collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tarea4">
+                      <span class="task-num">4</span>Guarda evidencias
+                    </button>
+                  </h3>
+                  <div id="tarea4" class="accordion-collapse collapse" data-bs-parent="#accordionTareas">
+                    <div class="accordion-body accordion-body-pro">
+                      Guarda capturas en la carpeta <code>evidencias/</code>. Incluye consola, pruebas, responsive y antes/despues.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-pro">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="bi bi-flower1"></i></span>
+            <div>
+              <p class="fw-bold mb-0">Feria Rural Digital</p>
+              <p class="small opacity-60 mb-0">Semana 15 &mdash; Taller practico</p>
+            </div>
+          </div>
+          <p class="small opacity-60 mb-0">Documentacion, validacion y exposicion tecnica</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
